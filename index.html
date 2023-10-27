@@ -18,10 +18,51 @@
 
         <main>
             <div class="main-section">
-                <a class="btn-app btn-app-calculator">
+                
+                <!--calculator-->
+                <a class="btn-app btn-app-calculator" onclick="activateCalculator()">
                     <h3 class="btn-title">Calculator</h3>
                 </a>
+                
+                <div class="app-title">
+                    <h1>Calculator</h1>
+                </div>
 
+                <div id="calculator-area">
+                    <div class="container-calculator">
+                        <div id="calculator-app">
+                            <div class="calculator-display">
+                                <input value="0" disabled>
+                            </div>
+                            <div class="calculator-keys">
+                                <button class="calculator-btn">7</button>
+                                <button class="calculator-btn">8</button>
+                                <button class="calculator-btn">9</button>
+                                <button class="calculator-btn">+</button>
+                                <button class="calculator-btn">4</button>
+                                <button class="calculator-btn">5</button>
+                                <button class="calculator-btn">6</button>
+                                <button class="calculator-btn">-</button>
+                                <button class="calculator-btn">1</button>
+                                <button class="calculator-btn">2</button>
+                                <button class="calculator-btn">3</button>
+                                <button class="calculator-btn">*</button>
+                                <button class="calculator-btn">0</button>
+                                <button class="calculator-btn">.</button>
+                                <button class="calculator-btn">/</button>
+                                <button class="calculator-btn">=</button>
+                            </div>          
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app-return">
+                    <a onclick="appReturn()">return</a>
+                </div>
+
+
+
+                <!--calculator-->
                 <a class="btn-app btn-app-umanage">
                     <h3 class="btn-title">Add user</h3>
                 </a>
@@ -47,5 +88,6 @@
 
         </footer>
    </div> 
+   <script src="src/js/controller.js"></script>
 </body>
 </html>

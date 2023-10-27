@@ -44,13 +44,10 @@ main{
     height: 100px;
     width: 100px;
     margin: 40px;
-    cursor: pointer;
     display: flex;
+    cursor: pointer;
     justify-content: center;
-
-
 }
-
 .btn-app-calculator{ 
     background-image: url("../pics/calc1.png");
     background-repeat: no-repeat;
@@ -61,6 +58,63 @@ main{
     font-weight: lighter;
     font-size: 14px;
 }
+.app-title{
+    display: none;
+    border: 1px solid red;
+    margin-bottom: 2vh;
+}
+#calculator-area{
+    z-index: 1;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    scroll-behavior: smooth;
+}
+.container-calculator{
+    border: 0.5px solid gray;
+    height: 51vh;
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+#calculator-app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.calculator-display > input{
+    margin: 0;
+    font-size: 60px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 44vh;
+    text-align: right;
+}
+
+.calculator-btn{
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    font-size: 26px;
+    border-radius: 40px;
+}
+.app-return{
+    display: none;
+}
+
+.app-return > a{
+    border: 1px solid red;
+    margin-top: 2vh;
+    font-size: 46px;
+}
+
+
+
+
+
 
 .btn-app-umanage{
     background-image: url("../pics/add-user.png");
