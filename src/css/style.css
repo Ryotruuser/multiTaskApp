@@ -1,0 +1,127 @@
+*{
+    border: 0;
+    margin: 0;
+}
+.container{
+    display: grid;
+    grid-template-columns:  2fr 1fr;
+    grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer"
+    ;
+}
+
+header{
+    grid-area: header;
+}
+
+.title{
+    display: flex;
+    background: lightcyan;
+    height: 150px;
+    margin-top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.1px solid rgba(0, 0, 0, 0.2);
+}
+.main-title{
+
+}
+
+main{
+    grid-area: main;
+}
+.main-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.btn-app{
+    -webkit-tap-highlight-color: transparent;
+    height: 100px;
+    width: 100px;
+    margin: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.btn-app-calculator{ 
+    background-image: url("../pics/calc1.png");
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+}
+.btn-app-calculator > .btn-title{
+    margin-top: 95px;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.btn-app-umanage{
+    background-image: url("../pics/add-user.png");
+    background-repeat: no-repeat;
+    background-position: 15px ;
+    background-size: 70px 70px;
+}
+.btn-app-umanage > .btn-title{
+    margin-top: 95px;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.btn-app-ulist{
+    background-image: url("../pics/list-user.png");
+    background-repeat: no-repeat;
+    background-position: 15px ;
+    background-size: 70px 70px;
+}
+.btn-app-ulist > .btn-title{
+    margin-top: 95px;
+    font-weight: lighter;
+    font-size: 14px
+}
+
+.btn-app-table{
+    background-image: url("../pics/table.png");
+    background-repeat: no-repeat;
+    background-position: 15px ;
+    background-size: 70px 70px;
+}
+.btn-app-table > .btn-title{
+    margin-top: 95px;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.btn-app-soon{
+    background-image: url("../pics/soon.png");
+    background-repeat: no-repeat;
+    background-position: 15px ;
+    background-size: 70px 70px;
+}
+.btn-app-soon > .btn-title{
+    margin-top: 90px;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.btn-app-exit{
+    background-image: url("../pics/undo.png");
+    background-repeat: no-repeat;
+    background-position: 15px ;
+    background-size: 70px 70px;
+}
+.btn-app-exit > .btn-title{
+    margin-top: 90px;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+footer{
+    grid-area: footer;
+}

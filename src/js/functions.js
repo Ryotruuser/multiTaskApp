@@ -71,6 +71,7 @@ let calc = function(){
 let peoples = []
 let listUsers = []
 let addUser = function(){
+    peoples.shift()
     //stop using array and use storage browser for it <update required in the future>
     let people = {name: prompt("type the user name: "), 
     age: prompt("type the user age: "), login: prompt("add the user login: "), pass: prompt("add the user password: ")}
@@ -84,9 +85,8 @@ let addUser = function(){
     }else if(getAway.includes("n")){
         return choice = 0
     }else if(getAway.includes("l")){
-        let listUserChoice = prompt(`${listUsers}\n A[Add other user] or L[leave]`).toLowerCase()
+        let listUserChoice = prompt(`Users registered until now \n${listUsers}\n A[Add other user] or L[leave]`).toLowerCase()
         if(listUserChoice.includes('a')){
-            peoples.shift()
             addUser()
         }else if(listUserChoice.includes('l')){
             return choice = 0
@@ -109,7 +109,6 @@ let showUsers = () => {
 let tables = []
 let multiTable = () =>{
     let userChoice = prompt("do you want a single table or the whole table? S[single] W[whole] B[Back] L[leave]").toLowerCase()
-    let table = []
     if(userChoice.includes('s')){
         let tableNumber = prompt("type the number of the table: ")
         for(let i = 1; i <= 10; i++){
@@ -125,6 +124,11 @@ let multiTable = () =>{
             return choice = 1
         }
     }else if(userChoice.includes('w')){
-        
+        for(let i = 1; i <= 10; i++){
+            for(let y = 1; 10 >= y; y++){
+                tables += (`${i} X ${y} = ${i*y} \r\n` )
+            }
+        }
+        console.log(tables)
     }
 }
