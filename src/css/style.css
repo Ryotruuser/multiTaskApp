@@ -11,11 +11,9 @@
     "footer footer"
     ;
 }
-
 header{
     grid-area: header;
 }
-
 .title{
     display: flex;
     background: lightcyan;
@@ -26,10 +24,6 @@ header{
     align-items: center;
     border-bottom: 0.1px solid rgba(0, 0, 0, 0.2);
 }
-.main-title{
-
-}
-
 main{
     grid-area: main;
 }
@@ -48,6 +42,8 @@ main{
     cursor: pointer;
     justify-content: center;
 }
+
+/*calculator app css*/
 .btn-app-calculator{ 
     background-image: url("../pics/calc1.png");
     background-repeat: no-repeat;
@@ -60,8 +56,6 @@ main{
 }
 .app-title{
     display: none;
-    border: 1px solid red;
-    margin-bottom: 2vh;
 }
 #calculator-area{
     z-index: 1;
@@ -72,7 +66,7 @@ main{
 }
 .container-calculator{
     border: 0.5px solid gray;
-    height: 51vh;
+    height: 62vh;
     display: none;
     flex-direction: row;
     flex-wrap: wrap;
@@ -93,7 +87,6 @@ main{
     width: 44vh;
     text-align: right;
 }
-
 .calculator-btn{
     width: 80px;
     height: 80px;
@@ -101,16 +94,22 @@ main{
     font-size: 26px;
     border-radius: 40px;
 }
+.calculator-clear-btn{
+    width: 32vh;
+}
 .app-return{
     display: none;
 }
-
 .app-return > a{
-    border: 1px solid red;
     margin-top: 2vh;
+    cursor: pointer;
     font-size: 46px;
+    height: 50px;
 }
-
+.app-return > a > img {
+    width: 50px;
+}
+/*calculator app css finished*/
 
 
 

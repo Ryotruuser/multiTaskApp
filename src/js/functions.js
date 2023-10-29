@@ -1,4 +1,4 @@
-let calc = function(){
+/*let calc = function(){
 
     let calcChoice = prompt(`1 - multiply\n2 - sum\n3 - divider\n4 - sub\n5 - pow\n6 - back\n7 - exit\ntype your choice for the calculator:  `)
 
@@ -131,4 +131,12 @@ let multiTable = () =>{
         }
         console.log(tables)
     }
+}*/
+
+calcBtns = (btnValue) => {
+    let calcDisplay = document.getElementById("calculator-d-value")
+    if(calcDisplay.value == 0){
+        calcDisplay.value = ""
+    }
+    calcDisplay.value += btnValue.value
 }

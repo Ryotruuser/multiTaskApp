@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="425px=device-width, initial-scale=1.0">
     <title>Multi Task App</title>
     <link rel="stylesheet" href="src/css/normalize.css">
     <link rel="stylesheet" href="src/css/style.css">
@@ -32,32 +32,36 @@
                     <div class="container-calculator">
                         <div id="calculator-app">
                             <div class="calculator-display">
-                                <input value="0" disabled>
+                                <input value="0" disabled id="calculator-d-value">
                             </div>
                             <div class="calculator-keys">
-                                <button class="calculator-btn">7</button>
-                                <button class="calculator-btn">8</button>
-                                <button class="calculator-btn">9</button>
-                                <button class="calculator-btn">+</button>
-                                <button class="calculator-btn">4</button>
-                                <button class="calculator-btn">5</button>
-                                <button class="calculator-btn">6</button>
-                                <button class="calculator-btn">-</button>
-                                <button class="calculator-btn">1</button>
-                                <button class="calculator-btn">2</button>
-                                <button class="calculator-btn">3</button>
-                                <button class="calculator-btn">*</button>
-                                <button class="calculator-btn">0</button>
-                                <button class="calculator-btn">.</button>
-                                <button class="calculator-btn">/</button>
-                                <button class="calculator-btn">=</button>
+                                <button class="calculator-btn" value="7" onclick="calcBtns(this)">7</button>
+                                <button class="calculator-btn" value="8" onclick="calcBtns(this)">8</button>
+                                <button class="calculator-btn" value="9" onclick="calcBtns(this)">9</button>
+                                <button class="calculator-btn" value="+" onclick="calcBtns(this)">+</button>
+                                <button class="calculator-btn" value="4" onclick="calcBtns(this)">4</button>
+                                <button class="calculator-btn" value="5" onclick="calcBtns(this)">5</button>
+                                <button class="calculator-btn" value="6" onclick="calcBtns(this)">6</button>
+                                <button class="calculator-btn" value="-" onclick="calcBtns(this)">-</button>
+                                <button class="calculator-btn" value="1" onclick="calcBtns(this)">1</button>
+                                <button class="calculator-btn" value="2" onclick="calcBtns(this)">2</button>
+                                <button class="calculator-btn" value="3" onclick="calcBtns(this)">3</button>
+                                <button class="calculator-btn" value="*" onclick="calcBtns(this)">*</button>
+                                <button class="calculator-btn" value="0" onclick="calcBtns(this)">0</button>
+                                <button class="calculator-btn" value="." onclick="calcBtns(this)">.</button>
+                                <button class="calculator-btn" value="/" onclick="calcBtns(this)">/</button>
+                                <button class="calculator-btn" value="+" onclick="calcBtns(this)">=</button>
+                                <button class="calculator-btn calculator-clear-btn" value="c" onclick="calcBtns(this)">c</button>
+                                <button class="calculator-btn calculator-delete-btn" value="<" onclick="calcBtns(this)"><<</button>
                             </div>          
                         </div>
                     </div>
                 </div>
 
                 <div class="app-return">
-                    <a onclick="appReturn()">return</a>
+                    <a onclick="appReturn()">
+                        <img src="src/pics/undo.png" alt="">
+                    </a>
                 </div>
 
 
@@ -89,5 +93,6 @@
         </footer>
    </div> 
    <script src="src/js/controller.js"></script>
+   <script src="src/js/functions.js"></script>
 </body>
 </html>
