@@ -135,8 +135,18 @@ let multiTable = () =>{
 
 calcBtns = (btnValue) => {
     let calcDisplay = document.getElementById("calculator-d-value")
-    if(calcDisplay.value == 0){
-        calcDisplay.value = ""
+    if(btnValue.value >= 0 || btnValue.value == "+" || btnValue.value == "-" || btnValue.value == "*" || btnValue.value == "/" || btnValue.value == "." ){
+        if(calcDisplay.value == "0"){
+            calcDisplay.value = ""    
+        }
+        calcDisplay.value += btnValue.value
+    }else if (btnValue.value == "<"){
+        let cDisplayLastNumber = calcDisplay.value[Object.keys(calcDisplay.value)[Object.keys(calcDisplay.value).length - 1]]
+        if(calcDisplay.value.includes(cDisplayLastNumber)){
+            console.log(cDisplayLastNumber)
+        }
+
+    }else if(btnValue.value == "c"){
+        calcDisplay.value = "0"
     }
-    calcDisplay.value += btnValue.value
 }
