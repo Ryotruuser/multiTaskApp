@@ -132,12 +132,13 @@ let multiTable = () =>{
         console.log(tables)
     }
 }*/
-
+let btnAudio = document.getElementById("myAudio"); 
 calcBtns = (btnValue) => {
+    btnAudio.play()
     let calcDisplay = document.getElementById("calculator-d-value")
     if(btnValue.value >= 0 || btnValue.value == "+" || btnValue.value == "-" || btnValue.value == "*" || btnValue.value == "/" || btnValue.value == "." ){
         if(calcDisplay.value == "0"){
-            calcDisplay.value = ""    
+            calcDisplay.value = "" 
         }
         calcDisplay.value += btnValue.value
     }else if (btnValue.value == "<"){
@@ -150,7 +151,8 @@ calcBtns = (btnValue) => {
         calcDisplay.value = "0"
     }else if(btnValue.value == "="){
         calcDisplay.value = eval(calcDisplay.value)
-    }else if(btnValue.value == "*"){
-        calcDisplay.value.replace("*","X")
+        result = calcDisplay.value = eval(calcDisplay.value)
     }
+    
+    
 }
