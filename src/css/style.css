@@ -115,25 +115,25 @@ main{
 
 
 
-.btn-app-umanage{
-    background-image: url("../pics/add-user.png");
+.btn-app-aTask{
+    background-image: url("../pics/daily-task.png");
     background-repeat: no-repeat;
     background-position: 15px ;
     background-size: 70px 70px;
 }
-.btn-app-umanage > .btn-title{
+.btn-app-aTask > .btn-title{
     margin-top: 95px;
     font-weight: lighter;
     font-size: 14px;
 }
 
-.btn-app-ulist{
-    background-image: url("../pics/list-user.png");
+.btn-app-lTask{
+    background-image: url("../pics/task-list.png");
     background-repeat: no-repeat;
     background-position: 15px ;
     background-size: 70px 70px;
 }
-.btn-app-ulist > .btn-title{
+.btn-app-lTask > .btn-title{
     margin-top: 95px;
     font-weight: lighter;
     font-size: 14px
