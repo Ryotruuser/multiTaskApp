@@ -150,5 +150,7 @@ calcBtns = (btnValue) => {
         calcDisplay.value = "0"
     }else if(btnValue.value == "="){
         calcDisplay.value = eval(calcDisplay.value)
+    }else if(btnValue.value == "*"){
+        calcDisplay.value.replace("*","X")
     }
 }
