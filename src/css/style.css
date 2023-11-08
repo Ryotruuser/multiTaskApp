@@ -141,16 +141,21 @@ main{
     font-size: 26px;
 }
 .task-add-name > input {
-    border: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
     border-radius: 5px;
 }
-
+.task-add-datehourlabel{
+    margin: 2vh 0 0 0;
+    font-size: 26px;
+    width: 100%;
+}
 .task-add-datehour{
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: flex-start;
     margin: 1vh 1vh;
+    border-bottom: 1px solid lightgray;
 }
 .task-datehour-hour{
     font-size: 20px;
@@ -159,10 +164,33 @@ main{
     font-size: 20px;
     margin-left: 20px;
 }
-
-
-
-
+.task-add-desclabel{
+    width: 100%;
+    margin: 2vh 0 0.5vh 0;
+    font-size: 26px;
+}
+#task-add-desc{
+    width: 100%;
+    padding: 0;
+    border: 1px solid lightgray;
+    font-size: 26px;
+}
+.task-add-btns{
+    display: flex;
+    width: 100%;
+    margin: 2vh 0 0 0;
+    justify-content: center;
+}
+.task-add-btns > button {
+    margin: 20px;
+    border: 1px solid black;
+    padding: 5px;
+    width: 50%;
+    height: 6vh;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+}
 
 
 /*task add css area end*/

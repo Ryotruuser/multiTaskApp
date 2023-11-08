@@ -74,17 +74,24 @@
                     </div>
                     
 
-                    <div class="task-add-datehour">
+                    <label for="task-add-datehour" class="task-add-datehourlabel">Date and Time</label>
+                    <div class="task-add-datehour" name="task-add-datehour">
                         <input type="time" value="12:00" class="task-datehour-hour">
                         <input type="date" value="2023-12-12"class="task-datehour-date">
                         
                     </div>
 
-                    <textarea name="" id="" cols="30" rows="10" placeholder="type the task description... "></textarea>
+                    <label for="textarea" class="task-add-desclabel">Description</label>
+                    <textarea 
+                    name="textarea" 
+                    id="task-add-desc" 
+                    cols="40" 
+                    rows="5" 
+                    placeholder="type the task description...  "></textarea>
 
                     <div class="task-add-btns">
-                        <button>Cancel</button>
-                        <button>Add task</button>
+                        <button style="background: red;">Cancel</button>
+                        <button style="background: green;">Add task</button>
                     </div>
                     
 
