@@ -41,15 +41,22 @@ calculatorReturn = () => {
 }
 
 activateTaskManager = () => {
-    let appReturn = document.getElementsByClassName("app-return")
-    let appIcons = document.getElementsByClassName("btn-app");
-    let taskArea = document.getElementsByClassName("task-manager-area")
-    let title = document.getElementsByClassName("main-title")
-    taskArea[0].style.display = "flex"
+    let taskAddArea = document.getElementById("task-add-area")
+    let appIcons = document.getElementsByClassName("btn-app")
+    let appTitle = document.getElementsByClassName("main-title")
     for(let i = 0; i < appIcons.length; i++){
         appIcons[i].style.display = "none"
     }
-    title[0].innerHTML = "Add task"
-    appReturn[0].style.display = "flex"
+    taskAddArea.style.display = "flex"
+    appTitle[0].innerHTML = "Add task"
 }
-
+cancelTask = () => {
+    let taskAddArea = document.getElementById("task-add-area")
+    let appIcons = document.getElementsByClassName("btn-app")
+    let appTitle = document.getElementsByClassName("main-title")
+    for(let i = 0; i < appIcons.length; i++){
+        appIcons[i].style.display = "flex"
+    }
+    taskAddArea.style.display = "none"
+    appTitle[0].innerHTML = "Multi Task App"
+}

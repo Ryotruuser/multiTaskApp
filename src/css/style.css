@@ -38,7 +38,7 @@ main{
     height: 100px;
     width: 100px;
     margin: 40px;
-    display: none;
+    display: flex;
     cursor: pointer;
     justify-content: center;
 }
@@ -128,7 +128,7 @@ main{
 /*task add css area*/
 
 #task-add-area{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
