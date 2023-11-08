@@ -139,13 +139,13 @@ calcBtns = (btnValue) => {
             calcDisplay.value = "" 
         }
         calcDisplay.value += btnValue.value
-    }else if (btnValue.value == "<"){
+    }/*else if (btnValue.value == "<"){
         let cDisplayLastNumber = calcDisplay.value[Object.keys(calcDisplay.value)[Object.keys(calcDisplay.value).length - 1]]
         if(calcDisplay.value.includes(cDisplayLastNumber)){
             console.log(cDisplayLastNumber)
         }
 
-    }else if(btnValue.value == "c"){
+    }*/else if(btnValue.value == "c"){
         calcDisplay.value = "0"
     }else if(btnValue.value == "="){
         calcDisplay.value = eval(calcDisplay.value)

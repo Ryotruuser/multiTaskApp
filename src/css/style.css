@@ -100,7 +100,6 @@ main{
     color: white;
 }
 .calculator-clear-btn{
-    width: 260px;
     font-size: 40px;
     color: red;
 }
@@ -110,6 +109,7 @@ main{
 .calculator-result-btn{
     background: #20d420;
     font-size: 60px;
+    width: 100%;
 }
 .app-return{
     display: none;
