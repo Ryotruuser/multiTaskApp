@@ -61,9 +61,39 @@
 
                 <!--calculator-->
 
-                <a class="btn-app btn-app-aTask">
+                <!--task manager add-->
+                <a class="btn-app btn-app-aTask" onclick="activateTaskManager()">
                     <h3 class="btn-title">Add task</h3>
                 </a>
+                
+                <div id="task-add-area">
+
+                    <div class="task-add-name">
+                        <label for="">Task name</label>
+                        <input type="text" placeholder="type the task name...">
+                    </div>
+                    
+
+                    <div class="task-add-datehour">
+                        <input type="time" value="12:00" class="task-datehour-hour">
+                        <input type="date" value="2023-12-12"class="task-datehour-date">
+                        
+                    </div>
+
+                    <textarea name="" id="" cols="30" rows="10" placeholder="type the task description... "></textarea>
+
+                    <div class="task-add-btns">
+                        <button>Cancel</button>
+                        <button>Add task</button>
+                    </div>
+                    
+
+                </div>
+
+
+
+
+                <!--task manager add-->
 
                 <a class="btn-app btn-app-lTask">
                     <h3 class="btn-title">Tasks</h3>

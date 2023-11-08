@@ -39,3 +39,17 @@ calculatorReturn = () => {
     calcDisplay.value = "0"
     calcDisplay.style.display = "none"
 }
+
+activateTaskManager = () => {
+    let appReturn = document.getElementsByClassName("app-return")
+    let appIcons = document.getElementsByClassName("btn-app");
+    let taskArea = document.getElementsByClassName("task-manager-area")
+    let title = document.getElementsByClassName("main-title")
+    taskArea[0].style.display = "flex"
+    for(let i = 0; i < appIcons.length; i++){
+        appIcons[i].style.display = "none"
+    }
+    title[0].innerHTML = "Add task"
+    appReturn[0].style.display = "flex"
+}
+

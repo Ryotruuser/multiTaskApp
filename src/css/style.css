@@ -38,7 +38,7 @@ main{
     height: 100px;
     width: 100px;
     margin: 40px;
-    display: flex;
+    display: none;
     cursor: pointer;
     justify-content: center;
 }
@@ -125,8 +125,47 @@ main{
 }
 /*calculator app css finished*/
 
+/*task add css area*/
+
+#task-add-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5vh;
+}
+.task-add-name{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 26px;
+}
+.task-add-name > input {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.task-add-datehour{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    margin: 1vh 1vh;
+}
+.task-datehour-hour{
+    font-size: 20px;
+}
+.task-datehour-date{
+    font-size: 20px;
+    margin-left: 20px;
+}
 
 
+
+
+
+
+/*task add css area end*/
 
 
 .btn-app-aTask{
