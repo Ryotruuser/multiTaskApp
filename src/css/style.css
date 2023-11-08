@@ -1,3 +1,4 @@
+/*main section app */
 *{
     border: 0;
     margin: 0;
@@ -42,6 +43,7 @@ main{
     cursor: pointer;
     justify-content: center;
 }
+/*main section app */
 
 /*calculator app css*/
 .btn-app-calculator{ 
@@ -102,6 +104,7 @@ main{
 .calculator-clear-btn{
     font-size: 40px;
     color: red;
+    width: 260px;
 }
 .calculator-delete-btn{
     color: red;
@@ -109,7 +112,6 @@ main{
 .calculator-result-btn{
     background: #20d420;
     font-size: 60px;
-    width: 100%;
 }
 .app-return{
     display: none;
@@ -123,7 +125,7 @@ main{
 .app-return > a > img {
     width: 50px;
 }
-/*calculator app css finished*/
+/*calculator app css*/
 
 /*task add css area*/
 
@@ -193,7 +195,7 @@ main{
 }
 
 
-/*task add css area end*/
+/*task add css area*/
 
 
 .btn-app-aTask{
