@@ -1,0 +1,15 @@
+table {
+    width: auto;
+}
+
+.task-title{
+    color: blue;
+}
+#task-data{
+    padding: 20px;
+    background: black;
+}
+
+#task-date:hover{
+    background: gray;
+}
