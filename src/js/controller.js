@@ -102,5 +102,38 @@ addTask = () => {
         taskAlert.innerHTML = "Task name cant be empty!!"
         setTimeout(function() { taskAlert.innerHTML = "" }, 2000);
     }
-    
 }
+
+listTaskActivate = () =>{
+    let appIcons = document.getElementsByClassName("btn-app")
+    let appTitle = document.getElementsByClassName("main-title")
+    let taskListArea = document.getElementById("task-list-area")
+    let taskListAreaRet = document.getElementsByClassName("task-list-return")
+    for(let i = 0; i < appIcons.length; i++){
+        appIcons[i].style.display = "none"
+    }
+    taskListArea.style.display = "flex"
+    taskListAreaRet[0].style.display = "flex"
+}
+listTaskDeactivate = () =>{
+    let appIcons = document.getElementsByClassName("btn-app")
+    let appTitle = document.getElementsByClassName("main-title")
+    let taskListArea = document.getElementById("task-list-area")
+    let taskListAreaRet = document.getElementsByClassName("task-list-return")
+    for(let i = 0; i < appIcons.length; i++){
+        appIcons[i].style.display = "flex"
+    }
+    taskListArea.style.display = "none"
+    taskListAreaRet[0].style.display = "none"
+
+}
+
+/*
+LISTTASK LOOK LIKE CODE
+let storageTaskLen = localStorage.length
+    let taskteste = []
+    for(let i = 1; i < storageTaskLen + 1; i++ ){
+        taskteste.push(JSON.parse(localStorage.getItem(i)))
+    }
+    
+    console.log(taskteste)*/

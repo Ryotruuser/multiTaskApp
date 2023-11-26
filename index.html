@@ -95,18 +95,47 @@
                     </div>
                     <h4 id="task-alerts"></h4>
                     
-
                 </div>
-
-
-
 
                 <!--task manager add-->
 
-                <a class="btn-app btn-app-lTask">
+                <!--task list-->
+                <a class="btn-app btn-app-lTask" onclick="listTaskActivate()">
                     <h3 class="btn-title">Tasks</h3>
                 </a>
 
+
+                <div id="task-list-area">
+
+                    <div class="task-list-search">
+                        <input type="text" placeholder="task name here" id="task-list-name">
+                        <select id="task-year">
+                            <option value="" selected>year</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                        </select>
+                    </div>
+
+                    <div class="task-list-tasks">
+                        <a>
+                            <h4 class="task-list-props">task name</h4>
+                            <h4 class="task-list-separator"></h4>
+                            <h4 class="task-list-props">11:00</h4>
+                            <h4 class="task-list-separator"></h4>
+                            <h4 class="task-list-props">2023</h4>
+                        </a> 
+                    </div>
+
+                </div>
+
+                <div class="task-list-return">
+                    <a onclick="listTaskDeactivate()">
+                        <img src="src/pics/undo.png" alt="">
+                    </a>
+                </div>
+
+
+                <!--task list-->
                 <a class="btn-app btn-app-table">
                     <h3 class="btn-title">Math table</h3>
                 </a>
@@ -118,7 +147,7 @@
                     <h3 class="btn-title">Exitn</h3>
                 </a>
             </div>
-
+ 
         </main>
         <footer>
 

@@ -171,7 +171,7 @@ main{
     margin: 2vh 0 0.5vh 0;
     font-size: 26px;
 }
-#task-des{
+#task-desc{
     width: 100%;
     padding: 0;
     border: 1px solid lightgray;
@@ -199,6 +199,115 @@ main{
 
 /*task add css area*/
 
+/*task list css area*/
+
+#task-list-area{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5vh;
+    width: 100%;
+}
+.task-list-search{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+#task-list-name{
+    width: 100%;
+    font-size: 22px;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+}
+#task-year{
+    font-size: 21px;
+    border-radius: 10px;
+    outline: none;
+    text-decoration: none;
+}
+.task-list-tasks{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+}
+.task-list-tasks > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 1px dotted blanchedalmond;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(151, 209, 219,0.7);
+}
+.task-list-tasks > a:hover{
+    background-color: rgb(151, 209, 219,1);
+}
+.task-list-tasks > a > h4{
+    margin: 10px;
+}
+.task-list-props{
+    font-size: 20px;
+
+}
+.task-list-separator{
+    width: 1px;
+    background: black;
+}
+
+.task-list-return{
+    display: none;
+    margin-top: 50px;
+}
+.task-list-return > a{
+    margin-top: 2vh;
+    cursor: pointer;
+    font-size: 46px;
+    height: 50px;
+}
+.task-list-return > a > img {
+    width: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*task list css area*/
 
 .btn-app-aTask{
     background-image: url("../pics/daily-task.png");
