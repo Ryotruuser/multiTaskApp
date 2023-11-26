@@ -79,6 +79,7 @@ addTask = () => {
     }
     tasks.push(task)
 
+    //converting the tasks for string with JSON and adding to the local storage
     for(let i = 0; i < tasks.length; i++){
         localStorage.setItem([i] ,JSON.stringify(tasks[i]));
     }
