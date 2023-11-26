@@ -62,8 +62,9 @@ cancelTask = () => {
 }
 //creating the tasklist
 let tasks = []
-
 addTask = () => {
+    //get the browser storage size to use in the added task
+    let storageTaskLen = localStorage.length
     //get the value of html page
     let taskName = document.getElementById("task-name").value
     let taskTime = document.getElementById("task-time").value
@@ -81,16 +82,12 @@ addTask = () => {
 
     //converting the tasks for string with JSON and adding to the local storage
     for(let i = 0; i < tasks.length; i++){
-        localStorage.setItem([i] ,JSON.stringify(tasks[i]));
+        localStorage.setItem([storageTaskLen + 1] ,JSON.stringify(tasks[i]));
     }
     
-    //note for the next coding session
-    //see if localStoarge already has items an them creating another nothing cover the old ones
-
     //cleaning the fields
     document.getElementById("task-name").value = ""
     document.getElementById("task-time").value = ""
     document.getElementById("task-date").value = ""
     document.getElementById("task-desc").value = ""
-    
 }
