@@ -60,16 +60,33 @@ cancelTask = () => {
     taskAddArea.style.display = "none"
     appTitle[0].innerHTML = "Multi Task App"
 }
+//creating the tasklist
+let tasks = []
+
 addTask = () => {
+    //get the value of html page
     let taskName = document.getElementById("task-name").value
     let taskTime = document.getElementById("task-time").value
     let taskDate = document.getElementById("task-date").value
     let taskDesc = document.getElementById("task-desc").value
-    let taskKey = ["taskName", "taskTime", "taskDate", "taskDesc"]
-    let taskValue = [taskName, taskTime, taskDate, taskDesc]
-    for(let i = 0; i < taskValue.length; i++){
-        localStorage.setItem(taskKey[i], taskValue[i]);
+
+    //Setting the object to be added to the tasklist
+    let task = {
+        "taskName" : taskName,
+        "taskTime" : taskTime,
+        "taskDate" : taskDate,
+        "taskDesc" : taskDesc
+    }
+    tasks.push(task)
+
+    for(let i = 0; i < tasks.length; i++){
+        localStorage.setItem([i] ,JSON.stringify(tasks[i]));
     }
     
+    //cleaning the fields
+    document.getElementById("task-name").value = ""
+    document.getElementById("task-time").value = ""
+    document.getElementById("task-date").value = ""
+    document.getElementById("task-desc").value = ""
     
 }
