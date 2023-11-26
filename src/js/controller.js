@@ -84,6 +84,9 @@ addTask = () => {
         localStorage.setItem([i] ,JSON.stringify(tasks[i]));
     }
     
+    //note for the next coding session
+    //see if localStoarge already has items an them creating another nothing cover the old ones
+
     //cleaning the fields
     document.getElementById("task-name").value = ""
     document.getElementById("task-time").value = ""
