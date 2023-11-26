@@ -105,6 +105,7 @@ addTask = () => {
 }
 
 listTaskActivate = () =>{
+    //activating the list app
     let appIcons = document.getElementsByClassName("btn-app")
     let appTitle = document.getElementsByClassName("main-title")
     let taskListArea = document.getElementById("task-list-area")
@@ -115,6 +116,30 @@ listTaskActivate = () =>{
     appTitle[0].innerHTML = "Task list"
     taskListArea.style.display = "flex"
     taskListAreaRet[0].style.display = "flex"
+    //activating the list app end
+
+    //dynamic list from the storage
+    let taskName = document.getElementById("task-list-name")
+    let taskHour = document.getElementById("task-list-hour")
+    let taskDate = document.getElementById("task-list-date")
+    let taskGenArea = document.getElementsByClassName("task-list-tasks")
+    let storageTaskLen = localStorage.length
+    let tasksAvaliables = []
+    for(let i = 1; i < storageTaskLen + 1; i++ ){
+        tasksAvaliables.push(JSON.parse(localStorage.getItem(i)))
+    }   
+
+    for(let i = 0; i < tasksAvaliables.length; i++){
+        taskGenArea[0].innerHTML += `
+        <a href="src/pages/editTask.html">
+            <h4 class="task-list-props" id="task-list-name">${tasksAvaliables[i].taskName}</h4>
+            <h4 class="task-list-separator"></h4>
+            <h4 class="task-list-props" id="task-list-hour">${tasksAvaliables[i].taskTime}</h4>
+            <h4 class="task-list-separator"></h4>
+            <h4 class="task-list-props" id="task-list-date">${tasksAvaliables[i].taskDate.substr(0, 4)}</h4>
+        </a> 
+        `
+    }
 }
 listTaskDeactivate = () =>{
     let appIcons = document.getElementsByClassName("btn-app")
@@ -129,13 +154,3 @@ listTaskDeactivate = () =>{
     taskListAreaRet[0].style.display = "none"
 
 }
-
-/*
-LISTTASK LOOK LIKE CODE
-let storageTaskLen = localStorage.length
-    let taskteste = []
-    for(let i = 1; i < storageTaskLen + 1; i++ ){
-        taskteste.push(JSON.parse(localStorage.getItem(i)))
-    }
-    
-    console.log(taskteste)*/
