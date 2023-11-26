@@ -180,7 +180,6 @@ main{
 .task-add-btns{
     display: flex;
     width: 100%;
-    margin: 2vh 0 0 0;
     justify-content: center;
 }
 .task-add-btns > button {
@@ -192,6 +191,9 @@ main{
     border-radius: 10px;
     font-size: 20px;
     color: white;
+}
+#task-alerts{
+    margin: 2vh 0 0 0;
 }
 
 

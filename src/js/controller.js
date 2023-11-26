@@ -66,28 +66,41 @@ addTask = () => {
     //get the browser storage size to use in the added task
     let storageTaskLen = localStorage.length
     //get the value of html page
+    let taskAlert = document.getElementById("task-alerts") 
     let taskName = document.getElementById("task-name").value
     let taskTime = document.getElementById("task-time").value
     let taskDate = document.getElementById("task-date").value
     let taskDesc = document.getElementById("task-desc").value
 
-    //Setting the object to be added to the tasklist
-    let task = {
-        "taskName" : taskName,
-        "taskTime" : taskTime,
-        "taskDate" : taskDate,
-        "taskDesc" : taskDesc
-    }
-    tasks.push(task)
+    //validation of fields and box alert configuration
+    if(taskName != ""){
+        
+        //Setting the object to be added to the tasklist
+        let task = {
+            "taskName" : taskName,
+            "taskTime" : taskTime,
+            "taskDate" : taskDate,
+            "taskDesc" : taskDesc
+        }
+        tasks.push(task)
 
-    //converting the tasks for string with JSON and adding to the local storage
-    for(let i = 0; i < tasks.length; i++){
-        localStorage.setItem([storageTaskLen + 1] ,JSON.stringify(tasks[i]));
+        //converting the tasks for string with JSON and adding to the local storage
+        for(let i = 0; i < tasks.length; i++){
+            localStorage.setItem([storageTaskLen + 1] ,JSON.stringify(tasks[i]));
+        }
+
+        //cleaning the fields
+        document.getElementById("task-name").value = ""
+        document.getElementById("task-time").value = ""
+        document.getElementById("task-date").value = ""
+        document.getElementById("task-desc").value = ""
+        taskAlert.style.color = "green"
+        taskAlert.innerHTML = "Task successfully added!!"
+        setTimeout(function() { taskAlert.innerHTML = "" }, 2000);
+    }else{
+        taskAlert.style.color = "red"
+        taskAlert.innerHTML = "Task name cant be empty!!"
+        setTimeout(function() { taskAlert.innerHTML = "" }, 2000);
     }
     
-    //cleaning the fields
-    document.getElementById("task-name").value = ""
-    document.getElementById("task-time").value = ""
-    document.getElementById("task-date").value = ""
-    document.getElementById("task-desc").value = ""
 }
