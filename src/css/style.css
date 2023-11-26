@@ -242,9 +242,12 @@ main{
     border-radius: 10px;
     margin-bottom: 10px;
     background-color: rgb(151, 209, 219,0.7);
+    text-decoration: none;
+    color: black;
 }
 .task-list-tasks > a:hover{
     background-color: rgb(151, 209, 219,1);
+    color: black;
 }
 .task-list-tasks > a > h4{
     margin: 10px;

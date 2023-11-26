@@ -112,6 +112,7 @@ listTaskActivate = () =>{
     for(let i = 0; i < appIcons.length; i++){
         appIcons[i].style.display = "none"
     }
+    appTitle[0].innerHTML = "Task list"
     taskListArea.style.display = "flex"
     taskListAreaRet[0].style.display = "flex"
 }
@@ -123,6 +124,7 @@ listTaskDeactivate = () =>{
     for(let i = 0; i < appIcons.length; i++){
         appIcons[i].style.display = "flex"
     }
+    appTitle[0].innerHTML  = "Multi Task App"
     taskListArea.style.display = "none"
     taskListAreaRet[0].style.display = "none"
 

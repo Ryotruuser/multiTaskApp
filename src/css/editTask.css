@@ -1,0 +1,114 @@
+/*main section app */
+*{
+    border: 0;
+    margin: 0;
+}
+.container{
+    display: grid;
+    grid-template-columns:  2fr 1fr;
+    grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer"
+    ;
+}
+header{
+    grid-area: header;
+}
+.title{
+    display: flex;
+    background: lightcyan;
+    height: 150px;
+    margin-top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.1px solid rgba(0, 0, 0, 0.2);
+}
+main{
+    grid-area: main;
+}
+.main-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.btn-app{
+    -webkit-tap-highlight-color: transparent;
+    height: 100px;
+    width: 100px;
+    margin: 40px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+}
+/*main section app */
+#task-edit-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5vh;
+}
+.task-edit-name{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 26px;
+}
+.task-edit-name > input {
+    border-bottom: 1px solid lightgray;
+    border-radius: 5px;
+}
+.task-edit-datehourlabel{
+    margin: 2vh 0 0 0;
+    font-size: 26px;
+    width: 100%;
+}
+.task-edit-datehour{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin: 1vh 1vh;
+    border-bottom: 1px solid lightgray;
+    
+}
+.task-edit-hour{
+    font-size: 24px;
+}
+
+.task-edit-date{
+    font-size: 24px;
+    margin-left: 20px;
+}
+.task-edit-desclabel{
+    width: 100%;
+    margin: 2vh 0 0.5vh 0;
+    font-size: 26px;
+}
+#task-edit-desc{
+    width: 100%;
+    padding: 0;
+    border: 1px solid lightgray;
+    font-size: 26px;
+}
+.task-edit-btns{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.task-edit-btns > button {
+    margin: 20px;
+    border: 1px solid black;
+    padding: 5px;
+    width: 50%;
+    height: 6vh;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+}
+#task-edit-alerts{
+    margin: 2vh 0 0 0;
+}
