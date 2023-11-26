@@ -185,11 +185,11 @@ showMoreTasks = () => {
         for(let i = 1; i < tasksAvaliables.length; i++){
             taskGenArea[0].innerHTML += `
             <a href="src/pages/editTask.html">
-                <h4 class="task-list-props" id="task-list-name">${tasksAvaliables[i].taskName}</h4>
+                <h4 class="task-list-props" id="task-list-name">${tasksAvaliables[i].taskName.substr(0,19)}</h4>
                 <h4 class="task-list-separator"></h4>
                 <h4 class="task-list-props" id="task-list-hour">${tasksAvaliables[i].taskTime}</h4>
                 <h4 class="task-list-separator"></h4>
-                <h4 class="task-list-props" id="task-list-date">${tasksAvaliables[i].taskTime}</h4>
+                <h4 class="task-list-props" id="task-list-date">${tasksAvaliables[i].taskDate.substr(0,4)}</h4>
             </a> 
             `
         }
