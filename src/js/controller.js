@@ -128,12 +128,15 @@ listTaskActivate = () =>{
         tasksAvaliables.push(JSON.parse(localStorage.getItem(i)))
     }
 
+    //creating a url that allows send to the editpage which task we click
+    let url = new URL("/src/pages/editTask.html","http://127.0.0.1:5500/index.html")
+    let taskUrl = url.href + "?"
     //generating in the html the fist task
     if(storageTaskLen != 0){
         emptyAlert.innerHTML = ""
         taskGenArea[0].innerHTML = 
         `
-            <a href="src/pages/editTask.html">
+            <a href="${taskUrl}${0}">
                 <h4 class="task-list-props" id="task-list-name">${tasksAvaliables[0].taskName}</h4>
                 <h4 class="task-list-separator"></h4>
                 <h4 class="task-list-props" id="task-list-hour">${tasksAvaliables[0].taskTime}</h4>
@@ -171,6 +174,7 @@ listTaskDeactivate = () =>{
 }
 //tryng a solution for the problem with listing the list of task over and over again
 showMoreTasks = () => {
+    //getting some variables to help clear some bugs
     let taskGenArea = document.getElementsByClassName("task-list-tasks")
     let showMoreBtn = document.getElementsByClassName("task-list-more-btn")
     //getting the flesh info again
@@ -179,12 +183,16 @@ showMoreTasks = () => {
     for(let i = 1; i < storageTaskLen + 1; i++ ){
         tasksAvaliables.push(JSON.parse(localStorage.getItem(i)))
     }
+    //creating a url that allows send to the editpage which task we click
+    let url = new URL("/src/pages/editTask.html","http://127.0.0.1:5500/index.html")
+    let taskUrl = url.href + "?"
 
+    //creating the html link from the array
     if(storageTaskLen > 1){
         showMoreBtn[0].style.display = "flex"
         for(let i = 1; i < tasksAvaliables.length; i++){
             taskGenArea[0].innerHTML += `
-            <a href="src/pages/editTask.html">
+            <a href="${taskUrl}${i}">
                 <h4 class="task-list-props" id="task-list-name">${tasksAvaliables[i].taskName.substr(0,19)}</h4>
                 <h4 class="task-list-separator"></h4>
                 <h4 class="task-list-props" id="task-list-hour">${tasksAvaliables[i].taskTime}</h4>
@@ -194,6 +202,5 @@ showMoreTasks = () => {
             `
         }
     }
-    
     showMoreBtn[0].style.display = "none"
 }
