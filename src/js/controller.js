@@ -104,13 +104,14 @@ addTask = () => {
     }
 }
 
-
 listTaskActivate = () =>{
     //activating the list app
     let appIcons = document.getElementsByClassName("btn-app")
     let appTitle = document.getElementsByClassName("main-title")
     let taskListArea = document.getElementById("task-list-area")
     let taskListAreaRet = document.getElementsByClassName("task-list-return")
+    let emptyAlert = document.getElementById("empty-alert")
+    let showMoreBtn = document.getElementsByClassName("task-list-more-btn")
     for(let i = 0; i < appIcons.length; i++){
         appIcons[i].style.display = "none"
     }
@@ -128,16 +129,25 @@ listTaskActivate = () =>{
     }
 
     //generating in the html the fist task
-    taskGenArea[0].innerHTML = 
-    `
-        <a href="src/pages/editTask.html">
-            <h4 class="task-list-props" id="task-list-name">${tasksAvaliables[0].taskName}</h4>
-            <h4 class="task-list-separator"></h4>
-            <h4 class="task-list-props" id="task-list-hour">${tasksAvaliables[0].taskTime}</h4>
-            <h4 class="task-list-separator"></h4>
-            <h4 class="task-list-props" id="task-list-date">${tasksAvaliables[0].taskDate.substr(0, 4)}</h4>
-        </a> 
-     `
+    if(storageTaskLen != 0){
+        emptyAlert.innerHTML = ""
+        taskGenArea[0].innerHTML = 
+        `
+            <a href="src/pages/editTask.html">
+                <h4 class="task-list-props" id="task-list-name">${tasksAvaliables[0].taskName}</h4>
+                <h4 class="task-list-separator"></h4>
+                <h4 class="task-list-props" id="task-list-hour">${tasksAvaliables[0].taskTime}</h4>
+                <h4 class="task-list-separator"></h4>
+                <h4 class="task-list-props" id="task-list-date">${tasksAvaliables[0].taskDate.substr(0, 4)}</h4>
+            </a> 
+        `
+        if(storageTaskLen > 1){
+            showMoreBtn[0].style.display = "flex"
+        }
+    }else{
+        emptyAlert.innerHTML = "No Tasks Available"
+    }
+    
 
 }
 listTaskDeactivate = () =>{
@@ -146,7 +156,11 @@ listTaskDeactivate = () =>{
     let taskListArea = document.getElementById("task-list-area")
     let taskListAreaRet = document.getElementsByClassName("task-list-return")
     let showMoreBtn = document.getElementsByClassName("task-list-more-btn")
-    showMoreBtn[0].style.display = "flex"
+    let storageTaskLen = localStorage.length
+    if(storageTaskLen > 1){
+        showMoreBtn[0].style.display = "flex"
+    }
+    
     for(let i = 0; i < appIcons.length; i++){
         appIcons[i].style.display = "flex"
     }
@@ -159,24 +173,27 @@ listTaskDeactivate = () =>{
 showMoreTasks = () => {
     let taskGenArea = document.getElementsByClassName("task-list-tasks")
     let showMoreBtn = document.getElementsByClassName("task-list-more-btn")
-
     //getting the flesh info again
     let storageTaskLen = localStorage.length
     let tasksAvaliables = []
     for(let i = 1; i < storageTaskLen + 1; i++ ){
         tasksAvaliables.push(JSON.parse(localStorage.getItem(i)))
     }
-    for(let i = 1; i < tasksAvaliables.length; i++){
-        taskGenArea[0].innerHTML += `
-        <a href="src/pages/editTask.html">
-            <h4 class="task-list-props" id="task-list-name">${tasksAvaliables[i].taskName}</h4>
-            <h4 class="task-list-separator"></h4>
-            <h4 class="task-list-props" id="task-list-hour">${tasksAvaliables[i].taskTime}</h4>
-            <h4 class="task-list-separator"></h4>
-            <h4 class="task-list-props" id="task-list-date">${tasksAvaliables[i].taskTime}</h4>
-        </a> 
-        `
+
+    if(storageTaskLen > 1){
+        showMoreBtn[0].style.display = "flex"
+        for(let i = 1; i < tasksAvaliables.length; i++){
+            taskGenArea[0].innerHTML += `
+            <a href="src/pages/editTask.html">
+                <h4 class="task-list-props" id="task-list-name">${tasksAvaliables[i].taskName}</h4>
+                <h4 class="task-list-separator"></h4>
+                <h4 class="task-list-props" id="task-list-hour">${tasksAvaliables[i].taskTime}</h4>
+                <h4 class="task-list-separator"></h4>
+                <h4 class="task-list-props" id="task-list-date">${tasksAvaliables[i].taskTime}</h4>
+            </a> 
+            `
+        }
     }
+    
     showMoreBtn[0].style.display = "none"
-    console.log(tasksAvaliables.length)
 }
