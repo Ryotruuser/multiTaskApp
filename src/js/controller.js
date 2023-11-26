@@ -60,3 +60,16 @@ cancelTask = () => {
     taskAddArea.style.display = "none"
     appTitle[0].innerHTML = "Multi Task App"
 }
+addTask = () => {
+    let taskName = document.getElementById("task-name").value
+    let taskTime = document.getElementById("task-time").value
+    let taskDate = document.getElementById("task-date").value
+    let taskDesc = document.getElementById("task-desc").value
+    let taskKey = ["taskName", "taskTime", "taskDate", "taskDesc"]
+    let taskValue = [taskName, taskTime, taskDate, taskDesc]
+    for(let i = 0; i < taskValue.length; i++){
+        localStorage.setItem(taskKey[i], taskValue[i]);
+    }
+    
+    
+}

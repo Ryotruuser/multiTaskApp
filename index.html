@@ -70,28 +70,28 @@
 
                     <div class="task-add-name">
                         <label for="">Task name</label>
-                        <input type="text" placeholder="type the task name...">
+                        <input type="text" placeholder="type the task name..." id="task-name">
                     </div>
                     
 
                     <label for="task-add-datehour" class="task-add-datehourlabel">Date and Time</label>
                     <div class="task-add-datehour" name="task-add-datehour">
-                        <input type="time" value="12:00" class="task-datehour-hour">
-                        <input type="date" value="2023-12-12"class="task-datehour-date">
+                        <input type="time" value="12:00" class="task-datehour-hour" id="task-time">
+                        <input type="date" value="2023-12-12"class="task-datehour-date" id="task-date">
                         
                     </div>
 
                     <label for="textarea" class="task-add-desclabel">Description</label>
                     <textarea 
+                    id="task-desc"
                     name="textarea" 
-                    id="task-add-desc" 
                     cols="40" 
                     rows="5" 
                     placeholder="type the task description...  "></textarea>
 
                     <div class="task-add-btns">
                         <button style="background: red;" onclick="cancelTask()">Cancel</button>
-                        <button style="background: green;">Add task</button>
+                        <button style="background: green;" onclick="addTask()">Add task</button>
                     </div>
                     
 
