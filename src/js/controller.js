@@ -133,25 +133,29 @@ listTaskActivate = () =>{
     let taskUrl = url.href + "?"
     //generating in the html the fist task
     if(storageTaskLen != 0){
-        emptyAlert.innerHTML = ""
-        taskGenArea[0].innerHTML = 
-        `
-            <a href="${taskUrl}${0}">
-                <h4 class="task-list-props" id="task-list-name">${tasksAvaliables[0].taskName}</h4>
-                <h4 class="task-list-separator"></h4>
-                <h4 class="task-list-props" id="task-list-hour">${tasksAvaliables[0].taskTime}</h4>
-                <h4 class="task-list-separator"></h4>
-                <h4 class="task-list-props" id="task-list-date">${tasksAvaliables[0].taskDate.substr(0, 4)}</h4>
-            </a> 
-        `
-        if(storageTaskLen > 1){
-            showMoreBtn[0].style.display = "flex"
+        if(tasksAvaliables[0] == null || tasksAvaliables[0] == undefined){
+            console.error("ERROR! array is null, even if the storage is still itens left.")
+            
+        }else{
+            emptyAlert.innerHTML = ""
+            taskGenArea[0].innerHTML = 
+            `
+                <a href="${taskUrl}${0}">
+                    <h4 class="task-list-props" id="task-list-name">${tasksAvaliables[0].taskName}</h4>
+                    <h4 class="task-list-separator"></h4>
+                    <h4 class="task-list-props" id="task-list-hour">${tasksAvaliables[0].taskTime}</h4>
+                    <h4 class="task-list-separator"></h4>
+                    <h4 class="task-list-props" id="task-list-date">${tasksAvaliables[0].taskDate.substr(0, 4)}</h4>
+                </a> 
+            `
+            if(storageTaskLen > 1){
+                showMoreBtn[0].style.display = "flex"
+            }
         }
+        
     }else{
         emptyAlert.innerHTML = "No Tasks Available"
     }
-    
-
 }
 listTaskDeactivate = () =>{
     let appIcons = document.getElementsByClassName("btn-app")

@@ -25,10 +25,10 @@ taskInputDesc.value = tasksAvaliables[pid].taskDesc
 //test
 
 //actions btn
-let returnToMainApp = () =>{
+returnToMainApp = () =>{
     window.location.href = "../../index.html"
 }
-let editTask = () =>{
+editTask = () =>{
     let editAlert = document.getElementById("task-edit-alerts")
     if(taskInputName.value != "" && taskInputTime.value != "" && taskInputDate.value != ""){
         let task = {
@@ -44,3 +44,18 @@ let editTask = () =>{
         setTimeout(function() { editAlert.innerHTML = "" }, 2000);
     }
 } 
+
+deletTask = () => {
+    let userChoice = prompt("Delete task ?\n[Y]yes or [N]no").toLowerCase()
+    let editAlert = document.getElementById("task-edit-alerts")
+    if(userChoice.includes("y")){
+        localStorage.removeItem(pid + 1)
+        taskInputName.value = ""
+        taskInputTime.value = ""
+        taskInputDate.value = ""
+        taskInputDesc.value = ""
+        editAlert.style.color = "red"
+        editAlert.innerHTML = "Task deleted, returning for the main menu"
+        setTimeout(function() { window.location.href = "../../index.html" }, 3000);
+    }
+}
