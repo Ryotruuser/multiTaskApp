@@ -40,7 +40,7 @@ let editTask = () =>{
         localStorage.setItem(pid + 1, JSON.stringify(task))
     }else{
         editAlert.style.color = "red"
-        editAlert.innerHTML = "empty input detected"
+        editAlert.innerHTML = "Task details cant be empty!!"
         setTimeout(function() { editAlert.innerHTML = "" }, 2000);
     }
 } 

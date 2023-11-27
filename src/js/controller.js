@@ -73,7 +73,7 @@ addTask = () => {
     let taskDesc = document.getElementById("task-desc").value
 
     //validation of fields and box alert configuration
-    if(taskName != ""){
+    if(taskName != "" && taskTime != "" && taskDate != ""){
         
         //Setting the object to be added to the tasklist
         let task = {
@@ -99,7 +99,7 @@ addTask = () => {
         setTimeout(function() { taskAlert.innerHTML = "" }, 2000);
     }else{
         taskAlert.style.color = "red"
-        taskAlert.innerHTML = "Task name cant be empty!!"
+        taskAlert.innerHTML = "Task details cant be empty!!"
         setTimeout(function() { taskAlert.innerHTML = "" }, 2000);
     }
 }
