@@ -261,6 +261,14 @@ main{
     background: black;
 }
 
+#all-tasks-clear{
+    padding: 10px;
+    border-radius: 5px;
+    background: lightgray;
+    margin-top: 4vh;
+    display: none;
+}
+
 .task-list-return{
     display: none;
     margin-top: 50px;

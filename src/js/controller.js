@@ -112,6 +112,7 @@ listTaskActivate = () =>{
     let taskListAreaRet = document.getElementsByClassName("task-list-return")
     let emptyAlert = document.getElementById("empty-alert")
     let showMoreBtn = document.getElementsByClassName("task-list-more-btn")
+    let clearBtn = document.getElementById("all-tasks-clear")
     for(let i = 0; i < appIcons.length; i++){
         appIcons[i].style.display = "none"
     }
@@ -119,7 +120,7 @@ listTaskActivate = () =>{
     taskListArea.style.display = "flex"
     taskListAreaRet[0].style.display = "flex"
     //activating the list app end
-
+    
     //dynamic list from the storage
     let taskGenArea = document.getElementsByClassName("task-list-tasks")
     let storageTaskLen = localStorage.length
@@ -133,26 +134,21 @@ listTaskActivate = () =>{
     let taskUrl = url.href + "?"
     //generating in the html the fist task
     if(storageTaskLen != 0){
-        if(tasksAvaliables[0] == null || tasksAvaliables[0] == undefined){
-            console.error("ERROR! array is null, even if the storage is still itens left.")
-            
-        }else{
-            emptyAlert.innerHTML = ""
-            taskGenArea[0].innerHTML = 
-            `
-                <a href="${taskUrl}${0}">
-                    <h4 class="task-list-props" id="task-list-name">${tasksAvaliables[0].taskName}</h4>
-                    <h4 class="task-list-separator"></h4>
-                    <h4 class="task-list-props" id="task-list-hour">${tasksAvaliables[0].taskTime}</h4>
-                    <h4 class="task-list-separator"></h4>
-                    <h4 class="task-list-props" id="task-list-date">${tasksAvaliables[0].taskDate.substr(0, 4)}</h4>
-                </a> 
-            `
-            if(storageTaskLen > 1){
-                showMoreBtn[0].style.display = "flex"
-            }
-        }
-        
+        clearBtn.style.display = "block"
+        emptyAlert.innerHTML = ""
+        taskGenArea[0].innerHTML = 
+        `
+            <a href="${taskUrl}${0}">
+                <h4 class="task-list-props" id="task-list-name">${tasksAvaliables[0].taskName}</h4>
+                <h4 class="task-list-separator"></h4>
+                <h4 class="task-list-props" id="task-list-hour">${tasksAvaliables[0].taskTime}</h4>
+                <h4 class="task-list-separator"></h4>
+                <h4 class="task-list-props" id="task-list-date">${tasksAvaliables[0].taskDate.substr(0, 4)}</h4>
+            </a> 
+        `
+        if(storageTaskLen > 1){
+            showMoreBtn[0].style.display = "flex"
+        }   
     }else{
         emptyAlert.innerHTML = "No Tasks Available"
     }
@@ -207,4 +203,18 @@ showMoreTasks = () => {
         }
     }
     showMoreBtn[0].style.display = "none"
+}
+
+deleteAllTasks = () => {
+    let areYouSure = prompt("Are are you sure ? this will delete all your tasks!! Y[YES] or N[NO]").toLowerCase()
+
+    if(areYouSure.includes("y")){
+        localStorage.clear()
+        setTimeout(function() { window.location.href = "../../index.html" }, 1000);
+        alert("Tasks deletion complete.")
+    }else if(areYouSure.includes("n")){
+
+    }else{
+        alert("please choose beetwen yes or no. No other option is avaliable")
+    }
 }

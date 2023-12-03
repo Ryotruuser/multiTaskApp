@@ -38,13 +38,17 @@ editTask = () =>{
             "taskDesc" : taskInputDesc.value
         }
         localStorage.setItem(pid + 1, JSON.stringify(task))
+        editAlert.style.color = "green"
+        editAlert.innerHTML = "Task details updated!!"
+        setTimeout(function() { editAlert.innerHTML = "ㅤ" }, 2000);
     }else{
         editAlert.style.color = "red"
         editAlert.innerHTML = "Task details cant be empty!!"
-        setTimeout(function() { editAlert.innerHTML = "" }, 2000);
+        setTimeout(function() { editAlert.innerHTML = "ㅤ" }, 2000);
     }
 } 
 
+/* with bug to solve later
 deletTask = () => {
     let userChoice = prompt("Delete task ?\n[Y]yes or [N]no").toLowerCase()
     let editAlert = document.getElementById("task-edit-alerts")
@@ -58,4 +62,4 @@ deletTask = () => {
         editAlert.innerHTML = "Task deleted, returning for the main menu"
         setTimeout(function() { window.location.href = "../../index.html" }, 3000);
     }
-}
+} */
