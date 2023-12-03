@@ -120,7 +120,7 @@ listTaskActivate = () =>{
     taskListArea.style.display = "flex"
     taskListAreaRet[0].style.display = "flex"
     //activating the list app end
-    
+
     //dynamic list from the storage
     let taskGenArea = document.getElementsByClassName("task-list-tasks")
     let storageTaskLen = localStorage.length
@@ -217,4 +217,20 @@ deleteAllTasks = () => {
     }else{
         alert("please choose beetwen yes or no. No other option is avaliable")
     }
+}
+
+mathTable = () => {
+    let mathTableArea = document.getElementById("mathTable-area")
+    let appIcons = document.getElementsByClassName("btn-app")
+    let appTitle = document.getElementsByClassName("main-title")
+    for(let i = 0; i < appIcons.length; i++){
+        appIcons[i].style.display = "none"
+    }
+    appTitle[0].innerHTML = "Math Table"
+    mathTableArea.style.display = "flex"
+
+}
+
+mathTableReturn = () => {
+    window.location.href = "index.html"
 }

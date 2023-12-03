@@ -296,11 +296,47 @@ main{
     color: red;
 }
 
+/*math table area*/
 
+#mathTable-area{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 5vh;
+}
 
+.tables{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
+.table{
+    padding: 5vh;
+    background: lightpink;
+    border-radius: 2vh;
+    font-size: 36px;
+    margin-bottom: 5vh;
+}
 
-
+.math-table-undo{
+    padding: 1vh;
+    background: rgba(255,255, 255, 0.7);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-radius: 1vh;
+}
+.math-table-undo > a{
+    cursor: pointer;
+    font-size: 46px;
+}
+.math-table-undo > a > img {
+    width: 50px;
+}
 
 
 
