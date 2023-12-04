@@ -223,14 +223,53 @@ mathTable = () => {
     let mathTableArea = document.getElementById("mathTable-area")
     let appIcons = document.getElementsByClassName("btn-app")
     let appTitle = document.getElementsByClassName("main-title")
+    let mathTableSpam = document.getElementsByClassName("tables")
+    let mathTables = document.getElementsByClassName("table") 
+    let randomColors = ["lightpink","lightblue","lightcoral","lightcyan","lightgoldenrodyellow",
+    "lightgreen","lightsalmon","lightseagreen","lightgrey"," lightskyblue"]
+
+    random = Math.floor(Math.random() * 10)
     for(let i = 0; i < appIcons.length; i++){
         appIcons[i].style.display = "none"
     }
+
     appTitle[0].innerHTML = "Math Table"
     mathTableArea.style.display = "flex"
+
+    //calc area
+    let tables = []
+    for(let x = 1; x < 11;x++){
+        console.log(x)
+        for(let y = 1 ; y < 11; y++){
+            console.log(`${x} X ${y} = ${x*y}`)
+            for(let i = 0; i < 10; i++){
+                if(x == i + 1){
+                    tables[i] += `${x} X ${y} = ${x*y}<br>`
+                }
+
+            }
+        }
+    }
+
+    for(let i = 0; i < 10; i++){
+        mathTableSpam[0].innerHTML += 
+            `<h4 class="table">${tables[i].substr(9)}</h4><br>`
+    }
+
+    for(let i = 0; i < 10; i++){
+        mathTables[i].style.background += randomColors[i]
+    }
 
 }
 
 mathTableReturn = () => {
     window.location.href = "index.html"
+}
+
+exitProgram = () => {
+    alert("Thanks for your visit, by ryotruuser.")
+}
+
+soon = () => {
+    alert("soon!!")
 }

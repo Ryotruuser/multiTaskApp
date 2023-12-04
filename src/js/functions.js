@@ -1,4 +1,5 @@
-/*let calc = function(){
+/* base program
+let calc = function(){
 
     let calcChoice = prompt(`1 - multiply\n2 - sum\n3 - divider\n4 - sub\n5 - pow\n6 - back\n7 - exit\ntype your choice for the calculator:  `)
 
@@ -152,3 +153,4 @@ calcBtns = (btnValue) => {
         result = calcDisplay.value = eval(calcDisplay.value)
     }  
 }
+
