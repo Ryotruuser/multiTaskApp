@@ -31,7 +31,6 @@ main{
 .main-section{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
 }
 .btn-app{
@@ -49,13 +48,13 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0.5vh;
+    width: 100%;
 }
 .task-edit-name{
     display: flex;
     flex-direction: column;
     width: 100%;
-    font-size: 26px;
+    font-size: 22px;
 }
 .task-edit-name > input {
     border-bottom: 1px solid lightgray;
@@ -63,7 +62,7 @@ main{
 }
 .task-edit-datehourlabel{
     margin: 2vh 0 0 0;
-    font-size: 26px;
+    font-size: 22px;
     width: 100%;
 }
 .task-edit-datehour{
@@ -71,28 +70,26 @@ main{
     flex-direction: row;
     width: 100%;
     justify-content: center;
-    margin: 1vh 1vh;
     border-bottom: 1px solid lightgray;
-    
 }
 .task-edit-hour{
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .task-edit-date{
-    font-size: 24px;
+    font-size: 20px;
     margin-left: 20px;
 }
 .task-edit-desclabel{
     width: 100%;
     margin: 2vh 0 0.5vh 0;
-    font-size: 26px;
+    font-size: 24px;
 }
 #task-edit-desc{
     width: 100%;
     padding: 0;
     border: 1px solid lightgray;
-    font-size: 26px;
+    font-size: 22px;
 }
 .task-edit-btns{
     display: flex;
@@ -115,6 +112,12 @@ main{
 
 .task-edit-return{
     margin-top: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 .task-edit-return > a{
     margin-top: 5vh;

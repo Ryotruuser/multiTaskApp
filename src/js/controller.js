@@ -50,15 +50,8 @@ activateTaskManager = () => {
     taskAddArea.style.display = "flex"
     appTitle[0].innerHTML = "Add task"
 }
-cancelTask = () => {
-    let taskAddArea = document.getElementById("task-add-area")
-    let appIcons = document.getElementsByClassName("btn-app")
-    let appTitle = document.getElementsByClassName("main-title")
-    for(let i = 0; i < appIcons.length; i++){
-        appIcons[i].style.display = "flex"
-    }
-    taskAddArea.style.display = "none"
-    appTitle[0].innerHTML = "Multi Task App"
+taskAddReturn = () => {
+    window.location.href = "index.html"
 }
 //creating the tasklist
 let tasks = []
@@ -239,9 +232,7 @@ mathTable = () => {
     //calc area
     let tables = []
     for(let x = 1; x < 11;x++){
-        console.log(x)
         for(let y = 1 ; y < 11; y++){
-            console.log(`${x} X ${y} = ${x*y}`)
             for(let i = 0; i < 10; i++){
                 if(x == i + 1){
                     tables[i] += `${x} X ${y} = ${x*y}<br>`
