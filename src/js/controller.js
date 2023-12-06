@@ -21,7 +21,7 @@ calculatorReturn = () => {
     let appIcons = document.getElementsByClassName("btn-app");
     let calcArea = document.getElementsByClassName("container-calculator");
     let appReturn = document.getElementsByClassName("app-return")
-    title[0].innerHTML = "Multi Task App"
+    title[0].innerHTML = "MultiTask APP"
     /*if(exitCalc.includes("y")){
         for(let i = 0; i < appIcons.length; i++){
             appIcons[i].style.display = "flex"
@@ -160,7 +160,7 @@ listTaskDeactivate = () =>{
     for(let i = 0; i < appIcons.length; i++){
         appIcons[i].style.display = "flex"
     }
-    appTitle[0].innerHTML  = "Multi Task App"
+    appTitle[0].innerHTML  = "MultiTask APP"
     taskListArea.style.display = "none"
     taskListAreaRet[0].style.display = "none"
 
