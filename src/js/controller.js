@@ -252,7 +252,43 @@ mathTable = () => {
     }
 
 }
+loadMoreTables = () =>{
+    let randomColors = [,,,,,,,,,,"lightpink","lightblue","lightcoral","lightcyan","lightgoldenrodyellow",
+    "lightgreen","lightsalmon","lightseagreen","lightgrey"," lightskyblue","lightpink","lightblue","lightcoral","lightcyan","lightgoldenrodyellow",
+    "lightgreen","lightsalmon","lightseagreen","lightgrey"," lightskyblue","lightpink","lightblue","lightcoral","lightcyan","lightgoldenrodyellow",
+    "lightgreen","lightsalmon","lightseagreen","lightgrey"," lightskyblue","lightpink","lightblue","lightcoral","lightcyan","lightgoldenrodyellow",
+    "lightgreen","lightsalmon","lightseagreen","lightgrey"," lightskyblue","lightpink","lightblue","lightcoral","lightcyan","lightgoldenrodyellow",
+    "lightgreen","lightsalmon","lightseagreen","lightgrey"," lightskyblue","lightpink","lightblue","lightcoral","lightcyan","lightgoldenrodyellow",
+    "lightgreen","lightsalmon","lightseagreen","lightgrey"," lightskyblue","lightpink","lightblue","lightcoral","lightcyan","lightgoldenrodyellow",
+    "lightgreen","lightsalmon","lightseagreen","lightgrey"," lightskyblue","lightpink","lightblue","lightcoral","lightcyan","lightgoldenrodyellow",
+    "lightgreen","lightsalmon","lightseagreen","lightgrey"," lightskyblue","lightpink","lightblue","lightcoral","lightcyan","lightgoldenrodyellow",
+    "lightgreen","lightsalmon","lightseagreen","lightgrey"," lightskyblue"]
+    let mathTableSpam = document.getElementsByClassName("tables")
+    let mathTables = document.getElementsByClassName("table") 
 
+    let tables = []
+    for(let x = 11; x < 101;x++){
+        for(let y = 1 ; y < 11; y++){
+            for(let i = 0; i < 100; i++){
+                if(x == i + 1){
+                    tables[i] += `${x} X ${y} = ${x*y}<br>`
+                }
+
+            }
+        }
+    }
+    for(let i = 10; i < 100; i++){
+        mathTableSpam[0].innerHTML += 
+            `<h4 class="table">${tables[i].substr(9)}</h4><br>`
+    }
+
+    for(let i = 10; i < 100; i++){
+        mathTables[i].style.background += randomColors[i]
+    }
+
+
+    console.log(tables)
+}
 mathTableReturn = () => {
     window.location.href = "index.html"
 }

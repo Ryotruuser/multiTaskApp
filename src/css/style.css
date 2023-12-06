@@ -347,6 +347,21 @@ main{
     margin-bottom: 5vh;
 }
 
+.load-more-tables{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh;
+}
+.load-more-tables > button{
+    padding: 1vh;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
 .math-table-undo{
     padding: 1vh;
     background: rgba(255,255, 255, 0.7);
