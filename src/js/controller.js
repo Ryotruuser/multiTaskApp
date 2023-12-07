@@ -123,8 +123,8 @@ listTaskActivate = () =>{
     }
 
     //creating a url that allows send to the editpage which task we click
-    let url = new URL("/src/pages/editTask.html","https://ryotruuser.github.io/multiTaskApp/")
-    let taskUrl = url.href + "?"
+    let url = new URL("multiTaskApp/src/pages/editTask.html","https://ryotruuser.github.io")
+    let taskUrl = url.href  + "?"
     console.log(taskUrl)
     console.log(url)
     //generating in the html the fist task
