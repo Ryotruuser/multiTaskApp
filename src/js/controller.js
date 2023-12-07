@@ -4,6 +4,7 @@ activateCalculator = () => {
     let appReturn = document.getElementsByClassName("app-return")
     let calcDisplay = document.getElementById("calculator-d-value")
     let title = document.getElementsByClassName("main-title")
+    let generalCalcArea = document.getElementById("calculator-area")
     for(let i = 0; i < appIcons.length; i++){
         appIcons[i].style.display = "none"
     }
@@ -11,7 +12,7 @@ activateCalculator = () => {
     appReturn[0].style.display = "flex"
     calcArea[0].style.display = "flex"
     calcDisplay.style.display = "flex"
-    
+    generalCalcArea.style.width = "100%";
 }
 
 calculatorReturn = () => {
@@ -21,6 +22,8 @@ calculatorReturn = () => {
     let appIcons = document.getElementsByClassName("btn-app");
     let calcArea = document.getElementsByClassName("container-calculator");
     let appReturn = document.getElementsByClassName("app-return")
+    let generalCalcArea = document.getElementById("calculator-area")
+    generalCalcArea.style.width = "auto";
     title[0].innerHTML = "MultiTask APP"
     /*if(exitCalc.includes("y")){
         for(let i = 0; i < appIcons.length; i++){
