@@ -267,7 +267,9 @@ loadMoreTables = () =>{
     "lightgreen","lightsalmon","lightseagreen","lightgrey"," lightskyblue"]
     let mathTableSpam = document.getElementsByClassName("tables")
     let mathTables = document.getElementsByClassName("table") 
+    let loadMoreBtn = document.getElementById("load-more-table")
 
+    loadMoreBtn.style.display = "none"
     let tables = []
     for(let x = 11; x < 101;x++){
         for(let y = 1 ; y < 11; y++){
@@ -287,9 +289,6 @@ loadMoreTables = () =>{
     for(let i = 10; i < 100; i++){
         mathTables[i].style.background += randomColors[i]
     }
-
-
-    console.log(tables)
 }
 mathTableReturn = () => {
     window.location.href = "index.html"
