@@ -205,10 +205,11 @@ showMoreTasks = () => {
 
 deleteAllTasks = () => {
     let areYouSure = prompt("Are are you sure ? this will delete all your tasks!! Y[YES] or N[NO]").toLowerCase()
+    
 
     if(areYouSure.includes("y")){
         localStorage.clear()
-        setTimeout(function() { window.location.href = "../../index.html" }, 1000);
+        setTimeout(function() { window.location.href = "index.html" }, 1000);
         alert("Tasks deletion complete.")
     }else if(areYouSure.includes("n")){
 
