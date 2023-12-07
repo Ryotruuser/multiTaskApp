@@ -48,6 +48,7 @@ main{
 /*main section app */
 
 /*calculator app css*/
+
 .btn-app-calculator{ 
     background-image: url("../pics/calc1.png");
     background-repeat: no-repeat;
@@ -69,16 +70,23 @@ main{
     margin-top: 5vh;
     border-bottom: 1px solid #232D3F;
     border-top: 1px solid #232D3F;
+    overflow: hidden;
 }
+
 .container-calculator{
     height: auto;
     display: none;
     flex-direction: column;
 }
 #calculator-app{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    width: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 10fr;
+    grid-template-areas: 
+    "t1 t2 t3 t4"
+    "t5 t5 t5 t5"
+    ;
 }
 #calculator-d-value{
     display: none;
@@ -87,12 +95,22 @@ main{
     text-align: right;
     border-bottom: 1px solid #232D3F;
 }
-.calculator-keys{
-    border: 1px solid gray;
-    padding: 5px;
+.calculatorKeys-quadrant-one{
+    grid-area: t1;
+}
+.calculatorKeys-quadrant-two{
+    grid-area: t2;
+}
+.calculatorKeys-quadrant-three{
+    grid-area: t3;
+}
+.calculatorKeys-quadrant-four{
+    grid-area: t4;
+}
+.calculatorKeys-quadrant-five{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
+    grid-area: t5;
 }
 .calculator-btn{
     width: 80px;
@@ -119,14 +137,52 @@ main{
     display: none;
 }
 .app-return > a{
-    margin-top: 2vh;
-    cursor: pointer;
-    font-size: 46px;
-    height: 50px;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    position: relative;
+    bottom: 0;
 }
 .app-return > a > img {
     width: 50px;
 }
+
+@media (min-width:280px){
+    .calculator-btn{
+        width: 90%;
+        height: 70px;
+        border-radius: 25px;
+    }.calculator-clear-btn{
+        width: 50%;
+    }.calculator-result-btn{
+        width: 50%;
+    }.app-return > a{
+        margin-top: 2vh;
+        cursor: pointer;
+        font-size: 46px;
+        height: 50px;
+    }
+}
+@media (min-width:658px){
+    #calculator-app{
+     border: 1px solid red;   
+    }
+    .calculator-btn{
+        height: 70px;
+        border-radius: 25px;
+    }.calculator-clear-btn{
+        width: 50%;
+    }.calculator-result-btn{
+        width: 50%;
+    }.app-return > a{
+        margin-top: 2vh;
+        cursor: pointer;
+        font-size: 46px;
+        height: 50px;
+    }
+}
+
 /*calculator app css*/
 
 /*task add css area*/
